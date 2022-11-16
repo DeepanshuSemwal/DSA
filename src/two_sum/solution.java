@@ -3,6 +3,7 @@ package two_sum;
 import java.util.HashMap;
 
 public class solution {
+    // problem name : two sum
     // similar problem 4sum
     public int[] twoSum(int[] nums, int target) {
 
