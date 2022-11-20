@@ -2,6 +2,7 @@ package remove_duplicates;
 
 public class remove_duplicates {
 
+    // remove duplicates
     // two pointer approach
     public int removeDuplicates(int[] nums) {
         if(nums.length==0)
