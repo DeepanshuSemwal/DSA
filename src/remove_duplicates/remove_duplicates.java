@@ -1,5 +1,8 @@
 package remove_duplicates;
 
+import java.util.Arrays;
+import java.util.HashMap;
+
 public class remove_duplicates {
 
     // remove duplicates
@@ -22,4 +25,9 @@ public class remove_duplicates {
         return i+1;
     }
 
+
+
 }
+
+
+
