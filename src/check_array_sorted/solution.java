@@ -11,8 +11,6 @@ public class solution {
             }
         }
 
-        int low=0;
-        int high=n-1;
 
         return true;
     }
