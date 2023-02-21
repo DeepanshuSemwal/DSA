@@ -1,5 +1,7 @@
 package duplicates_sortedarray;
 
+import java.awt.*;
+
 public class solution {
     public static int sorted(int arr[],int n)
     {
@@ -14,4 +16,7 @@ public class solution {
         }
         return res;
     }
+
+   
+
 }
