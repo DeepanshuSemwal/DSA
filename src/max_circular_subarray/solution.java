@@ -29,8 +29,7 @@ public class solution {
         int circular_max=arr_sum+ normalMax(nums,nums.length);
         return Math.max(normal_max,circular_max);
 
-
-
-
     }
+
+
 }
