@@ -38,11 +38,11 @@ public class solution {
         r_max[0]=arr[n-1];
         for(int i=1;i<n;i++)
         {
-            l_max[i]=Math.min(arr[i],l_max[i-1]);
+            l_max[i]=Math.max(arr[i],l_max[i-1]);
         }
         for(int i=n-2;i>=0;i--)
         {
-            r_max[i]=Math.min(arr[i],l_max[i+1]);
+            r_max[i]=Math.max(arr[i],r_max[i+1]);
         }
         for(int i=1;i<n-1;i++)
         {
