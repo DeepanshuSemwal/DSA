@@ -1,7 +1,6 @@
 package s_25;
 
 
-import java.util.Arrays;
 
 public class solution {
     public int findMin(int[] nums) {
