@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class solution {
     // problem name : two sum
     // similar problem 4sum
-    public int[] twoSum(int[] nums, int target) {
+    public static int[] twoSum(int[] nums, int target) {
 
 
         int[] result =new int[2];
@@ -14,13 +14,19 @@ public class solution {
         {
             if(hs.containsKey(target-nums[i]))
             {
-                result[0]=i;
-                result[1]=hs.get(target-nums[i]);
+                result[1]=i;
+                result[0]=hs.get(target-nums[i]);
                 return result;
             }
             hs.put(nums[i],i);
         }
         return result;
 
+    }
+
+    public static void main(String[] args) {
+        int arr[]={5,7,15,-7,-9};
+        int target =6;
+        System.out.println(twoSum(arr,target));
     }
 }
