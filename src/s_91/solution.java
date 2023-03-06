@@ -24,6 +24,7 @@ public class solution {
                y=i+1;
            }
        }
+       // if(x=-1) it means array is already sorted ,so we dont need to do anything
        if(x!=-1)
        {
            reverse(arr,x,y);
