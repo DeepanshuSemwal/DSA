@@ -13,6 +13,10 @@ import java.util.List;
 public class solution {
     public ListNode reverseList(ListNode head) {
 
+        if(head==null)
+        {
+            return head;
+        }
         ListNode cur=head;
         ListNode prev=null;
         while(cur!=null)
