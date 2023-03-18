@@ -6,6 +6,7 @@ public class solution {
 
     public static void printCombination(String str,String combination,int n,int i)
     {
+        // doubt in this code
         if(i==n)
         {
             System.out.println(combination);
