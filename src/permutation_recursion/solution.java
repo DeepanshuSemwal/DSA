@@ -11,7 +11,7 @@ public class solution {
             {
                 return;
             }
-            // include it or not include it same as subsets
+            // fix one charcter and then swaps
             swap(str,i,j);
             permute(str,i+1);
             swap(str,i,j); // to get original string so that in above step we swap next characters
