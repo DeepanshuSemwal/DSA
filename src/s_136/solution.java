@@ -20,7 +20,7 @@ public class solution {
         {
             if(flag==true)
             {
-                if(cur.data<cur.next.data)
+                if(cur.data>cur.next.data)
                 {
                     int temp=cur.data;
                     cur.data=cur.next.data;
@@ -29,7 +29,7 @@ public class solution {
             }
             else
             {
-                if(cur.data>cur.next.data)
+                if(cur.data<cur.next.data)
                 {
                     int temp=cur.data;
                     cur.data=cur.next.data;

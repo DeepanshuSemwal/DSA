@@ -6,15 +6,22 @@ public class solution {
     {
         if(n==0)
         {
-            return 1;
+            return 0;
         }
         if(n<0)
         {
             return -1;
         }
-        return Math.max(maxRopeCut(n-a,a,b,c),
+        int res=Math.max(maxRopeCut(n-a,a,b,c),
                 Math.max(maxRopeCut(n-b,a,b,c),maxRopeCut(n-c,a,b,c))
+
         );
+        if(res == -1)
+            return -1;
+
+        return res + 1;
+
+
 
     }
 }

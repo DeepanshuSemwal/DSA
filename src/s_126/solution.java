@@ -18,7 +18,7 @@ public class solution {
         // similar to merge sort
      ListNode l1=list1;
      ListNode l2=list2;
-     if(l1.val<l2.val)
+     if(l1.val>l2.val)
      {
          ListNode temp=l1;
          l1=l2;

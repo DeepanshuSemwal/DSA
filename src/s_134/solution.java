@@ -24,17 +24,17 @@ public class solution {
             cur1=cur2.next;
         }
 
-        if(a>b)
+        if(a<b)
         {
-          int diff=a-b;
+          int diff=b-a;
           while(diff-->0)
           {
               headB=headB.next;
           }
         }
-        else if(b>a)
+        else if(b<a)
         {
-            int diff=b-a;
+            int diff=a-b;
             while(diff-->0)
             {
                 headA=headA.next;

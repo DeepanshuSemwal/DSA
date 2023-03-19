@@ -58,6 +58,7 @@ public class solution {
             {
                 borrow=0;
             }
+            // insert
             tail.next=new Node(diff);
             tail=tail.next;
 

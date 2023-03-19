@@ -22,34 +22,44 @@ public class solution {
         {
             return;
         }
-        while(fast!=null&& fast.next!=null)
+        while(fast!=null && fast.next!=null)
         {
-            slow=slow.next;
             fast=fast.next.next;
-            if(slow==fast)
+            slow=slow.next;
+            if(fast==slow)
+            {
                 break;
+            }
+
         }
-        if(slow!=fast)
+        if(fast!=null)
         {
             return;
         }
-        if(slow==head)
+        slow=head;
+        while(slow.next!=fast.next)
         {
-            while(fast.next!=slow)
-                fast=fast.next;
-            fast.next=null;
+            fast=fast.next;
+            slow=slow.next;
         }
-        else if(slow==fast)
-        {
-            slow=head;
-            while(slow.next!=fast.next)
-            {
-                slow=slow.next;
-                fast=fast.next;
-            }
-            fast.next=null;
-        }
-        return;
+        fast.next=null;
 
+
+
+    }
+    public static Node detect(Node head)
+    {
+        Node slow=head;
+        Node fast=head;
+        while(fast!=null && fast.next!=null)
+        {
+            fast=fast.next.next;
+            slow=slow.next;
+            if(fast==slow)
+            {
+                return slow;
+            }
+        }
+        return null;
     }
 }
