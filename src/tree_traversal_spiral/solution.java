@@ -61,4 +61,50 @@ public class solution {
         }
     }
 
+    // efficient using two stacks
+
+    public void spiralTree(Node root)
+    {
+        if(root==null)
+        {
+            return;
+        }
+        Stack<Node>s1=new Stack<>();
+        Stack<Node>s2=new Stack<>();
+        s1.add(root);
+        while(!s1.isEmpty() || !s2.isEmpty())
+        {
+            while(!s1.isEmpty())
+            {
+                Node cur=s1.peek();
+                s1.pop();
+                System.out.println(cur.key+" ");
+                // add elemenet from right to left
+                if(cur.right!=null)
+                {
+                    s2.add(cur.left);
+                }
+                if(cur.left!=null)
+                {
+                    s2.add(cur.right);
+                }
+            }
+            while (!s2.isEmpty())
+            {
+                Node cur=s2.peek();
+                s2.pop();
+                System.out.println(cur.key+" ");
+                // add element from left to right
+                if(cur.left!=null)
+                {
+                    s1.add(cur.left);
+                }
+                if(cur.right!=null)
+                {
+                    s2.add(cur.left);
+                }
+            }
+        }
+    }
+
 }
