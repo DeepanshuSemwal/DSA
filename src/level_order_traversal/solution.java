@@ -17,6 +17,10 @@ public class solution {
 
     public void levelOrder(Node root)
     {
+        if(root==null)
+        {
+            return;
+        }
         Queue<Node>queue=new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty())
