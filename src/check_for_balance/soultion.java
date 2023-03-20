@@ -21,7 +21,7 @@ public class soultion {
         int lh=check_balance(root.left);
         if(lh==-1)
         {
-
+            return -1;
         }
         int rh=check_balance(root.right);
         if(rh==-1)
