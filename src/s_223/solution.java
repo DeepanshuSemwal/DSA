@@ -1,43 +1,38 @@
-package s_222;
+package s_223;
 
+import java.nio.channels.Pipe;
 import java.util.*;
 
-class Node{
+class Node
+{
     int data;
     Node left;
     Node right;
-    Node(int data){
-        this.data = data;
-        left=null;
-        right=null;
+    Node(int d)
+    {
+        data=d;
     }
 }
-
 public class solution {
-
-    static ArrayList<Integer> topView(Node root)
+    public ArrayList<Integer> bottomView(Node root)
     {
-        // add your code
-        Queue<Pair>queue=new LinkedList<>();
+        // Code here
+        // simply we are using level order traversal
         ArrayList<Integer>al=new ArrayList<>();
+        Queue<Pair>queue=new LinkedList<>();
+        TreeMap<Integer,Integer>map=new TreeMap<>();
         if(root==null)
         {
-            return al;
+            return null;
         }
-        // we use tree map so that we will get hashmap keys in sorted order that is from left to right
-        TreeMap<Integer,Integer>map=new TreeMap<>();
         queue.add(new Pair(0,root));
-        while(!queue.isEmpty())
+        while (!queue.isEmpty())
         {
             int count=queue.size();
-            for(int i=0;i<count;i++)
+            for (int i=0;i<count;i++)
             {
                 Pair cur=queue.poll();
-                if(!map.containsKey(cur.hd))
-                {
-
-                    map.put(cur.hd,cur.root.data);
-                }
+                map.put(cur.hd, cur.root.data);
                 if(cur.root.left!=null)
                 {
                     queue.add(new Pair(cur.hd-1,cur.root.left));
@@ -47,18 +42,13 @@ public class solution {
                     queue.add(new Pair(cur.hd+1,cur.root.right));
                 }
             }
-
-
         }
-        // itertate over map
-
+        // traversing in the map
         for(Map.Entry<Integer,Integer>entry:map.entrySet())
         {
             al.add(entry.getValue());
         }
         return al;
-
-
 
     }
 
@@ -72,7 +62,4 @@ public class solution {
             this.root=root;
         }
     }
-
-
-
 }
