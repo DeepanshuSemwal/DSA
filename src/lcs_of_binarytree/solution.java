@@ -21,11 +21,11 @@ public class solution {
         Node left=lcs(root.left,p,q);
         Node right=lcs(root.right,p,q);
         // result
-        if(root.left==null)
+        if(left==null)
         {
             return right;
         }
-        if(root.right==null)
+      else if(right==null)
         {
             return left;
         }
