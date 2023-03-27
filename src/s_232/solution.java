@@ -23,7 +23,8 @@ public class solution {
         //code here
         ArrayList<Node>al=new ArrayList<>();
         helper(root,al);
-        Collections.sort(al, (node1, node2) -> node1.data-node2.data); // we use this to arrange data in ascending order
+        Collections.sort(al, (node1, node2) -> node1.data-node2.data); // we use this to arrange data in ascending order for gfg
+        // for leetcode no need to these kind of stuffs see this problem sloution in leet code i have submitted
         return al;
 
     }
@@ -33,7 +34,7 @@ public class solution {
         {
             return "$";
         }
-        String subPath=helper(root.left,al)+","+root.data+","+helper(root.right,al);
+        String subPath=root.data+","+","+helper(root.left,al)+","+helper(root.right,al);
         if(map.containsKey(subPath))
         {
             map.put(subPath,map.get(subPath)+1);
