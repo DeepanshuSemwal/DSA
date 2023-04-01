@@ -14,53 +14,32 @@ class Node
 
 public class solution {
 
-    int ans=1;
+    int maxLevel=-1;
+    boolean ans=true;
     boolean check(Node root)
     {
         // Your code here
-
-        // this code giving wrong answer
-        int ma=-1;
-        int h=0;
-        helper(root,h,ma);
-        if(ans==1)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-
-
+        helper(root,0);
+        return ans;
     }
-    public void helper(Node root,int h,int ma)
+    void helper(Node root,int level)
     {
-        if(root==null)
-        {
-            return;
+        // To save further iteration when ans is flaged false
+        if(root == null || !ans) return;
+
+        // Check if the current node is leaf node or not
+        if(root.left == null && root.right == null){
+
+            // if leaf is it the first time when reaching a leaf node the store that level
+            if(maxLevel == -1) maxLevel = level;
+
+                // check if the leaf node is not equal to the maxLevel
+            else if(maxLevel != level) ans = false;
         }
-        if(ans==0)
-        {
-            return;
-        }
-        if(root.left==null && root.right==null)
-        {
-            if(ma==-1)
-            {
-                ma=h;
-            }
-            else
-            {
-                if(h!=ma)
-                {
-                    ans=0;
-                }
-            }
-            return;
-        }
-        helper(root.left,h+1,ma);
-        helper(root.right,h+1,ma);
+
+
+        helper(root.left, level +1);
+        helper(root.right, level +1);
     }
 
 }
