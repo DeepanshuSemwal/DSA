@@ -24,17 +24,16 @@ public class solution {
 
         if(root==null)
         {
-             root=new TreeNode(val);
-             root.left=null;
-             root.right=null;
-             return root;
-
+            return new TreeNode(val);
+//             root=new TreeNode(val);
+//             root.left=null;
+//             root.right=null;
         }
         if(root.val>val)
         {
            root.left= insertIntoBST(root.left,val);
         }
-        else
+        else if(root.val<val)
         {
             root.right=insertIntoBST(root.right,val);
         }
