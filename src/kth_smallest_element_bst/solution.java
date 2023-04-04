@@ -13,6 +13,10 @@ public class solution {
             data=d;
         }
     }
+
+    // for effcient solution we have to make change in structure of Node we have to add a leftcount
+    // navie solution is important
+
     public Node insert(Node root,int k)
     {
         if(root==null)
@@ -53,19 +57,22 @@ public class solution {
 
     // navie
 
-    public static Node kth_smallest(Node root,int k)
+    static int count=0;
+    public void kth_smallest(Node root,int k)
     {
-        int count=0;
-        if(root!=null)
-        {
-            kth_smallest(root.left,k);
-            count++;
-            if(count==k)
-            {
-                return root;
-            }
-            kth_smallest(root.right,k);
-        }
-        return null;
+
+      if(root==null)
+      {
+          return;
+      }
+      kth_smallest(root.left,k);
+      count++;
+      if(count==k)
+      {
+          System.out.println(root.data);
+      }
+      kth_smallest(root.right,k);
     }
+
+
 }
