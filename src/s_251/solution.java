@@ -1,20 +1,20 @@
 package s_251;
 
-class Node
+class TreeNode
 {
-    Node left;
-    Node right;
-    int data;
-    Node(int d)
+    TreeNode left;
+    TreeNode right;
+    int val;
+    TreeNode(int d)
     {
-        data=d;
+        val =d;
     }
 }
 public class solution {
 
     // exactly similar to construct a binary tree from preorder traversal
     // watch on leetcode 1008
-    public static Node post_order(int pre[], int size)
+    public static TreeNode post_order(int pre[], int size)
     {
         //Your code here
         int i[]=new int[1];
@@ -22,14 +22,14 @@ public class solution {
 
     }
 
-    public static Node helper(int arr[],int bound,int i[])
+    public static TreeNode helper(int arr[], int bound, int i[])
     {
         if(i[0]==arr.length || arr[i[0]]>bound)
         {
             return null;
         }
-        Node root=new Node(arr[i[0]++]);
-        root.left=helper(arr,root.data,i);
+        TreeNode root=new TreeNode(arr[i[0]++]);
+        root.left=helper(arr,root.val,i);
         root.right=helper(arr,bound,i);
         return root;
     }
