@@ -34,26 +34,7 @@ public class solution {
         }
         return root;
     }
-    public Node Kth_smallest(Node root,int k)
-    {
-        // effcient
-       if(root==null)
-       {
-           return null;
-       }
-       int count=root.left.count+1;
-       if(count==k)
-       {
-           return root;
-       }
-       if(count>k)
-       {
-           return Kth_smallest(root.left,k);
-       }
-       return Kth_smallest(root.right,k);
 
-
-    }
 
     // navie
 
@@ -76,3 +57,31 @@ public class solution {
 
 
 }
+
+
+// efficent
+
+//class Solution {
+//    int count=0;
+//    int res=0;
+//    public int kthSmallest(TreeNode root, int k) {
+//
+//        helper(root,k);
+//        return res;
+//
+//    }
+//    public void helper(TreeNode root,int k)
+//    {
+//        if(root==null)
+//        {
+//            return;
+//        }
+//        helper(root.left,k);
+//        count++;
+//        if(count==k)
+//        {
+//            res=root.val;
+//        }
+//        helper(root.right,k);
+//
+//    }
