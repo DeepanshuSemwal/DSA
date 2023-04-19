@@ -4,52 +4,51 @@ import java.util.Comparator;
 import java.util.Scanner;
 public class solution {
 
-    public  int paper_cut(int []x,int[] y)
-    {
+    public static int minimumCostOfBreaking(int[] x, int[] y,int m,int n) {
+        // code here
         Arrays.sort(x);
         Arrays.sort(y);
-        reverse(x);
-        reverse(y);
-        int n=x.length;
-        int m=y.length;
-        int i=0;
-        int j=0;
+        reverse(x,m);
+        reverse(y,n);
+        int res=0;
         int horizontal_count=1;
         int vertical_count=1;
-        int res=0;
-        while(i<n &&j<m)
+        int i=0;
+        int j=0;
+        while(i<m && j<n)
         {
-            if(x[i]>y[j])
+            if(x[i]>=y[j])
             {
                 res+=x[i]*vertical_count;
-                horizontal_count++;
+                horizontal_count+=1;
                 i++;
             }
             else
             {
                 res+=y[j]*horizontal_count;
-                vertical_count++;
+                vertical_count+=1;
                 j++;
             }
         }
-        while(i<n)
+        while(i<m)
         {
             res+=x[i]*vertical_count;
             i++;
         }
-        while(j<m)
+        while(j<n)
         {
             res+=y[j]*horizontal_count;
             j++;
         }
+
         return res;
 
-
     }
-    public void reverse(int arr[])
+
+    public static void reverse(int arr[],int n)
     {
         int i=0;
-        int j=arr.length-1;
+        int j=n-1;
         while(i<=j)
         {
             int temp=arr[i];

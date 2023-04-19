@@ -17,10 +17,10 @@ class Node
 }
 public class soltuion {
 
-    public static Node floor(int arr[],int x)
-    {
-
-
-    }
+//    public static Node floor(int arr[],int x)
+//    {
+//
+//
+//    }
 
 }
