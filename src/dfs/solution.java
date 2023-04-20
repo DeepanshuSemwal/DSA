@@ -8,11 +8,19 @@ public class solution {
         // Code here
         ArrayList<Integer>al=new ArrayList<>();
         boolean visited[]=new boolean[V];
-        return DfsRec(V,adj,al,0,visited);
+        int s=0;
+        for(int i=0;i<V;i++) // for disconnected graphs
+        {
+            if(visited[i]==false)
+            {
+                DfsRec(V,adj,al,s,visited);
+            }
+        }
+        return al;
 
     }
 
-    public ArrayList<Integer> DfsRec(int V, ArrayList<ArrayList<Integer>> adj,ArrayList<Integer>al,int s,boolean visited[])
+    public void DfsRec(int V, ArrayList<ArrayList<Integer>> adj,ArrayList<Integer>al,int s,boolean visited[])
     {
        visited[s]=true;
        al.add(s);
@@ -23,7 +31,6 @@ public class solution {
                DfsRec(V,adj,al,u,visited);
            }
        }
-       return al;
     }
 
 
