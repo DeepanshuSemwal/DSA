@@ -15,7 +15,7 @@ class Pair
 }
 public class solution {
 
-    static int prims(ArrayList<ArrayList<Integer>>adj,int V)
+    static int prims(ArrayList<ArrayList<ArrayList<Integer>>>adj,int V)
     {
         int visited[]=new int[V];
         PriorityQueue<Pair>pq=new PriorityQueue<>((x,y)->x.distance-y.distance);
@@ -34,8 +34,8 @@ public class solution {
             sum+=weight;
             for(int i=0;i<adj.get(node).size();i++)
             {
-                int edge_weight=adj.get(i).get(1);
-                int adj_node=adj.get(i).get(0);
+                int edge_weight=adj.get(node).get(i).get(1);
+                int adj_node=adj.get(node).get(i).get(0);
                 if(visited[adj_node]==0)
                 {
                     pq.add(new Pair(edge_weight,adj_node));
