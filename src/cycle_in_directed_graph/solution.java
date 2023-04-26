@@ -23,7 +23,7 @@ public class solution {
     public static boolean DfsRec(ArrayList<ArrayList<Integer>>adj,int V,int s,boolean[]visited,boolean[] recst)
     {
         visited[s]=true;
-        recst[s]=false;
+        recst[s]=true;
         for(int u:adj.get(s))
         {
             if(visited[s]==false)
