@@ -7,6 +7,7 @@ public class solution {
 
     public ArrayList<Integer> dfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
         // Code here
+        // check on gfg
 
         ArrayList<Integer>al=new ArrayList<>();
         boolean[]visited=new boolean[V];
