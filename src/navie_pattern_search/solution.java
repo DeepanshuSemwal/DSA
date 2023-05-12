@@ -2,6 +2,38 @@ package navie_pattern_search;
 
 public class solution {
 
+
+
+    // my solution
+
+    static boolean search(String pat, String txt)
+    {
+        // Your code here
+        int m=pat.length();
+        int n=txt.length();
+        int i=0;
+        int j=0;
+        while(i<n && j<m)
+        {
+            if(pat.charAt(j)==txt.charAt(i))
+            {
+                i++;
+                j++;
+            }
+            else
+            {
+                j=0;
+                if(pat.charAt(j)!=txt.charAt(i))
+                {
+                    i++;
+                }
+            }
+        }
+        return j==m;
+
+    }
+
+
     public static void naviePattern(String text,String pattern)
     {
         int n=text.length();
@@ -11,7 +43,7 @@ public class solution {
             int j;
             for(j=0;j<m;j++)
             {
-                if(text.charAt(i)!=pattern.charAt(j))
+                if(text.charAt(i+j)!=pattern.charAt(j))
                 {
                     break;
                 }
