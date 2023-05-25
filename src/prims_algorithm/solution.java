@@ -1,7 +1,6 @@
 package prims_algorithm;
 
-import java.util.ArrayList;
-import java.util.PriorityQueue;
+import java.util.*;
 
 class Pair
 {
@@ -46,4 +45,22 @@ public class solution {
         return sum;
 
     }
-}
+
+
+
+    public String removeConsecutiveCharacter(String S)
+    {
+        String res="";
+        for(int i=1;i<S.length();i++)
+        {
+            if(S.charAt(i)==S.charAt(i-1))
+            {
+                res+=S.charAt(i);
+            }
+        }
+        return res;
+    }
+
+
+    }
+
