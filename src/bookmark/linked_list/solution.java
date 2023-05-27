@@ -1,46 +1,6 @@
-package k_th_largest_element;
-
-import java.util.Collection;
-import java.util.Collections;
-import java.util.PriorityQueue;
+package bookmark.linked_list;
 
 public class solution {
-    public static int findKthLargest(int[] nums, int k) {
-
-        int ans=0;
-        PriorityQueue<Integer>pq=new PriorityQueue<>(Collections.reverseOrder());
-        for(int i=0;i<nums.length;i++)
-        {
-            pq.add(nums[i]);
-        }
-        while(k-->0)
-        {
-            ans=pq.poll();
-        }
-        return ans;
-
-    }
-
-    // using min heap
-    public static int findKthLargest1(int []nums,int k)
-    {
-
-        PriorityQueue<Integer>pq=new PriorityQueue<>();
-        for(int i=0;i<k;i++)
-        {
-            pq.add(nums[i]);
-        }
-        for(int i=k;i<nums.length;i++)
-        {
-            if(pq.peek()<nums[i])
-            {
-                pq.poll();
-                pq.add(nums[i]);
-            }
-        }
-        return pq.poll();
-    }
-
 
     public static Node modifyTheList(Node head)
     {
@@ -92,9 +52,8 @@ public class solution {
         }
         return prev;
     }
-
-
 }
+
 class Node
 {
     int data;

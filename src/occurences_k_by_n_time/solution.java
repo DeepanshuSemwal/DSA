@@ -47,6 +47,7 @@ public class solution {
            {
                res++;
            }
+           cur=1;
        }
        return res;
     }
