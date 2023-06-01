@@ -28,9 +28,13 @@ public class solution {
             }
         }
         ArrayList<ArrayList<String>>res=new ArrayList<>();
-        for(ArrayList<String>al:map.values())
+//        for(ArrayList<String>al:map.values())
+//        {
+//            res.add(al);
+//        }
+        for(Map.Entry<String,ArrayList<String>>mapEntry:map.entrySet())
         {
-            res.add(al);
+            res.add(mapEntry.getValue());
         }
         return res;
 
@@ -55,6 +59,5 @@ public class solution {
         key+=".";
         return key;
     }
-
 
 }

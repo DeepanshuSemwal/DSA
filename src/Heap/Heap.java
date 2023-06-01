@@ -99,6 +99,11 @@ public class Heap {
             i=parent(i);
         }
     }
+    void deleteKey(int i)
+    {
+        decreaseKey(i, Integer.MIN_VALUE);
+        extractMin();
+    }
 
     public void buildHeap()
     {
@@ -132,7 +137,7 @@ public class Heap {
 
     public void buildHeap(int arr[],int n)
     {
-        for(int i=(n-2)/2;i>=0;i--)
+        for(int i=(n-2)/2;i>=1;i--)
         {
             maxHeapify(arr,n,i);
         }
@@ -145,7 +150,7 @@ public class Heap {
             int temp=arr[i];
             arr[i]=arr[0];
             arr[0]=temp;
-            maxHeapify(arr,n,0);
+            maxHeapify(arr,i,0); // we are sending i as a size so that we are able to reduce the size of the heap
         }
     }
 

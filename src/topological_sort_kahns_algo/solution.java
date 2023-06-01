@@ -35,7 +35,8 @@ public class solution {
 
            for(int v:adj.get(u))
            {
-               if(--in_degrre[v]==0)
+               in_degrre[v]--;
+               if(in_degrre[v]==0)
                {
                    queue.add(v);
                }

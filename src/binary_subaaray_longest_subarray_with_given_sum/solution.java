@@ -6,7 +6,7 @@ import java.util.HashSet;
 
 public class solution {
 
-    // navie
+    // efficient
     int longestCommonSum(boolean arr1[], boolean arr2[], int n) {
         // code here
        int temp[]=new int[n];
@@ -41,26 +41,11 @@ public class solution {
 
 
     }
-    static int findLongestConseqSubseq(int arr[], int N)
-    {
-        // add your code here
-        int cur=1;
-        int res=1;
-        Arrays.sort(arr);
-        for(int i=1;i<N;i++)
-        {
-            if(arr[i]==arr[i-1]+1)
-            {
-                cur++;
-            }
-            else
-            {
-                res=Math.max(res,cur);
-                cur=1;
-            }
-        }
-        return res;
-    }
+
+
+
+
+
 
 
 }

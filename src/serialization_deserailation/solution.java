@@ -41,7 +41,6 @@ public class solution {
         root.right=derserailze(al);
         return root;
 
-
     }
 
 }

@@ -1,5 +1,7 @@
 package s_86;
 
+import java.util.Arrays;
+
 public class solution {
     static long inversionCount(long arr[], long N)
     {

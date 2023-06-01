@@ -37,19 +37,23 @@ public class solution {
         Arrays.sort(arr);
         int cur=1;
         int res=0;
-       for(int i=1;i<n;i++)
-       {
-           while(arr[i-1]==arr[i])
-           {
-               cur++;
-           }
-           if(cur>n/k)
-           {
-               res++;
-           }
-           cur=1;
-       }
-       return res;
+        for(int i=1;i<n;i++)
+        {
+            if(arr[i-1]==arr[i])
+            {
+                cur++;
+            }
+            if(cur>n/k)
+            {
+                res++;
+            }
+            if(arr[i-1]!=arr[i])
+            {
+                cur=1;
+            }
+
+        }
+        return res;
     }
 
     // efficient approach

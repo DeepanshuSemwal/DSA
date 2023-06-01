@@ -7,6 +7,7 @@ public class solution {
 
     int maxRepeating(int[] arr, int n, int k) {
         // code here
+
         HashMap<Integer,Integer>map=new HashMap<>();
         for(int i=0;i<n;i++)
         {
@@ -19,11 +20,11 @@ public class solution {
                 map.put(arr[i],1);
             }
         }
-       int max=Integer.MIN_VALUE;
+        int max=Integer.MIN_VALUE;
         int min=Integer.MAX_VALUE;
-        for(int x:map.keySet())
+        for(Map.Entry<Integer,Integer>mapEntry:map.entrySet())
         {
-            max=Math.max(max,map.get(x)); // saving maximum repeating element
+            max=Math.max(max,mapEntry.getValue()); // getting maxmimum repeating elemnets
         }
         for(Map.Entry<Integer,Integer> mapEntry: map.entrySet())
         {
