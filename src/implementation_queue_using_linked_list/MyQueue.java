@@ -2,11 +2,11 @@ package implementation_queue_using_linked_list;
 
 import java.util.LinkedList;
 
-public class Queue {
+public class MyQueue {
 
     int cap;
     int size;
-    Queue(int c)
+    MyQueue(int c)
     {
         cap=c;
         size=0;

@@ -1,11 +1,11 @@
 package implementation_queue_using_array;
 
-public class Queue {
+public class MyQueue {
 
     int cap;
     int size;
     int arr[];
-    Queue(int c)
+    MyQueue(int c)
     {
         cap=c;
         arr=new int[cap];
