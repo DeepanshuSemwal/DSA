@@ -17,6 +17,10 @@ public class MyStack {
     Queue<Integer>q2=new LinkedList<>();
     public void push(int x)
     {
+        if(size==cap)
+        {
+            return;
+        }
         if(q1.isEmpty())
         {
             q1.add(x);
