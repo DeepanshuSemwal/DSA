@@ -81,6 +81,35 @@ public void deleteFront()
         queue.offer(1);
         System.out.println(queue.peekFirst());
         // peek and peekFirst are same
+
+    }
+
+    public static void eraseAt(ArrayDeque<Integer> deq , int X)
+    {
+        //Your code here
+        deq.remove(X);
+
+    }
+
+    //Function to erase the elements in range start (inclusive), end (exclusive).
+    public static void eraseInRange(ArrayDeque<Integer> deq , int start, int end)
+    {
+        //Your code here
+        while(start<=end)
+        {
+            deq.remove();
+            start++;
+        }
+    }
+
+    //Function to erase all the elements in the deque.
+    public static void eraseAll(ArrayDeque<Integer> deq )
+    {
+        //Your code here
+        while(!deq.isEmpty())
+        {
+            deq.remove();
+        }
     }
 
 
