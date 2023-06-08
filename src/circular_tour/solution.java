@@ -31,31 +31,54 @@ public class solution {
 
     }
 
-    int tour(int petrol[], int distance[])
-    {
-        int n=petrol.length;
-        int start=0;
-        int balance=0;
-        int defcient=0;// kami
-        for(int i=0;i<n;i++)
-        {
-            balance+=petrol[i]-distance[i];
-            if(balance<0)
-            {
-                defcient+=balance;
-                start=i+1; // we are doing i+1 becuase we need to return position
-                balance=0;
+    int tour(int petrol[], int distance[]) {
+        int n = petrol.length;
+        int start = 0;
+        int balance = 0;
+        int defcient = 0;// kami
+        for (int i = 0; i < n; i++) {
+            balance += petrol[i] - distance[i];
+            if (balance < 0) {
+                defcient += balance;
+                start = i + 1; // we are doing i+1 becuase we need to return position
+                balance = 0;
             }
         }
-        if(balance+defcient>=0)
-        {
+        if (balance + defcient >= 0) {
             return start;
-        }
-        else
-        {
+        } else {
             return -1;
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

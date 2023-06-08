@@ -112,6 +112,20 @@ public void deleteFront()
         }
     }
 
+    String reverse(String str,int low,int high)
+    {
+        char ch[]=str.toCharArray();
+        while(low<=high)
+        {
+            char temp=ch[low];
+            ch[low]=ch[high];
+            ch[high]=temp;
+        }
+        return ch.toString();
+
+    }
+
+
 
 
 }

@@ -41,7 +41,7 @@ public class solution {
         for(int i=k;i<n;i++)
         {
             res.add(dq.peek());
-            while(!dq.isEmpty()&& dq.peek()<=i-k) // we are removing the element which is not the part of the window
+            while(!dq.isEmpty()&& dq.peek()<=i-k) // (i-k) we are removing the element which is not the part of the window
             {
                 dq.remove();
             }

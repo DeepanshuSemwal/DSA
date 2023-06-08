@@ -15,7 +15,7 @@ public class MyQueue2 {
         cap=c;
         size=0;
         front=0;
-        rear=size-1;
+        rear=cap-1;
         arr=new int[cap];
     }
 
@@ -34,13 +34,21 @@ public class MyQueue2 {
             return true;
         }
     }
+    public int getFront()
+    {
+        if(isEmpty())
+        {
+            return -1;
+        }
+        return arr[front];
+    }
     public int getRear()
     {
         if(isEmpty())
         {
             return -1;
         }
-        return (front+size-1)%cap;
+        return arr[front+size-1]%cap;
     }
     public void Enqueue(int x)
     {

@@ -35,6 +35,7 @@ public class solution {
         Stack<Integer>stack=new Stack<>();
         stack.add(0);
         res[index]=1;
+        index++;
         for(int i=1;i<n;i++)
         {
             while(!stack.isEmpty() && arr[stack.peek()]<arr[i])
@@ -43,11 +44,14 @@ public class solution {
             }
             if(stack.isEmpty())
             {
-                res[index]=i+1;
+                res[index]=i+1; // the current element is greater
+                index++;
+
             }
             else
             {
                 res[index]=i-stack.peek();
+                index++;
             }
             stack.add(i);
         }

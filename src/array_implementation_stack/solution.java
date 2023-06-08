@@ -17,11 +17,19 @@ class MyStack
     }
     public void push(int x)
     {
+        if(top==c)
+        {
+            return;
+        }
         top++;
         arr[top]=x;
     }
     public int pop()
     {
+        if(top==-1)
+        {
+            return -1;
+        }
         int res=arr[top];
         top--;
         return res;
