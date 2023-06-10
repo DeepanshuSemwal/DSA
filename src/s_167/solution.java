@@ -22,7 +22,7 @@ public class solution {
                 stack.push(a);
 
             }
-            else if(M[b][a]==0)  // b dont know b
+            else if(M[b][a]==0)  // b dont know a
             {
                  stack.push(b);
             }

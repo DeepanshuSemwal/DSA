@@ -39,7 +39,7 @@ public class solution {
                     break;
                 }
             }
-            if(queue.isEmpty()) // it means there is no non repeatingh element
+            if(queue.isEmpty()) // it means there is no non repeating element
             {
                 res+='#';
             }
