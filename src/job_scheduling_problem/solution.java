@@ -24,15 +24,15 @@ public class solution {
         Arrays.sort(arr,(a,b)->b.profit-a.profit);
         int job_id=0;
         int profit=0;
-        for(Job job:arr)
+        for(int i=0;i<n;i++)
         {
-            int deadline=job.deadline;
+            int deadline=arr[i].deadline;
             while (deadline>=1)
             {
                 if(slot[deadline-1]==false)
                 {
                     slot[deadline-1]=true;
-                    profit+=job.profit;
+                    profit+=arr[i].profit;
                     job_id++;
                     break;
                 }

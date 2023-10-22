@@ -1,6 +1,7 @@
 package tree_traversal_spiral;
 
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
@@ -103,8 +104,37 @@ public class solution {
                 {
                     s2.add(cur.left);
                 }
+
             }
         }
     }
 
+    public static int fun(String str,int n)
+    {
+        boolean visited[]=new boolean[256];
+        Arrays.fill(visited,false);
+        int res=-1;
+        for(int i=n-1;i>=0;i++)
+        {
+            if(visited[str.charAt(i)]==true)
+            {
+                res=i;
+            }
+            else
+            {
+                visited[str.charAt(i)]=true;
+            }
+
+        }
+        return res;
+    }
+
 }
+
+
+
+
+
+
+
+

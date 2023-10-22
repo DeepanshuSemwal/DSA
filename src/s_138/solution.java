@@ -14,35 +14,31 @@ public class solution {
         {
             // your code here
             head=reverse(head);
-            Node cur=head.next;
-            Node prev=head;
-            int max=prev.data;
-
-            if(head==null || head.next==null)
+            Node cur=head;
+            Node prev=head.next;
+            int max=head.data;
+            while(head!=null)
             {
-                return head;
-            }
-
-            while (head!=null)
-            {
-                if(cur.data>=max)
+                if(head.data>=max)
                 {
-                    max=cur.data;
+                    max=head.data;
                     prev=head;
                     head=head.next;
-
                 }
+
                 else
                 {
                     prev.next=head.next;
                     head=prev.next;
                 }
+
+
             }
             head=reverse(cur);
             return head;
 
-
         }
+
         Node reverse(Node head)
         {
             if(head==null || head.next==null)

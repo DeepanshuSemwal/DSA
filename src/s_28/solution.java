@@ -17,11 +17,11 @@ public class solution {
             res=Math.max(res,min_height*distance);
             if(lh<rh)
             {
-                lh++;
+                low++;
             }
             else  if(lh>rh)
             {
-                rh--;
+                high--;
             }
         }
         return res;

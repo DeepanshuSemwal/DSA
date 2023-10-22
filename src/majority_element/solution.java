@@ -30,6 +30,7 @@ public class solution {
 //        return index;
 
         // efficient approach
+        // morevote algorithm
         int candidate=0;
         int count=0;
         for(int i=0;i<nums.length;i++)

@@ -5,6 +5,13 @@ import java.util.HashMap;
 
 public class solution {
 
+
+
+
+
+
+
+
     // if 0 and positive are given then use sliding window
     public static int fun(int arr[],int n,int sum)
     {
@@ -105,6 +112,7 @@ public class solution {
             if(map.containsKey(cur_sum-sum))
             {
                 res=Math.max(res,i-map.get(cur_sum-sum));
+
             }
 
         }

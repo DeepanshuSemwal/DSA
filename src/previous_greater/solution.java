@@ -1,5 +1,7 @@
 package previous_greater;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class solution {
@@ -64,8 +66,10 @@ public class solution {
            }
            stack.add(arr[i]);
 
+
         }
         return res;
     }
+
 
 }
